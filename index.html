@@ -2,21 +2,19 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <title>Compinxa – Comunidade de Amizades +18</title>
+  <title>Compinxa – Amizades +18</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Compinxa é uma comunidade informal para maiores de 18 anos que querem fazer novas amizades online e, se quiserem, combinar encontros presenciais com segurança." />
 
   <style>
     :root {
-      --bg: #0f172a;
-      --bg-soft: #111827;
+      --bg: #020617;
+      --bg-soft: #0b1220;
       --accent: #22c55e;
-      --accent-soft: rgba(34, 197, 94, 0.12);
+      --accent-soft: rgba(34, 197, 94, 0.15);
       --text-main: #f9fafb;
       --text-soft: #9ca3af;
-      --card-bg: #020617;
       --border-subtle: #1f2937;
-      --danger: #f97373;
     }
 
     * {
@@ -26,7 +24,7 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1e293b 0, #020617 52%, #000 100%);
+      background: radial-gradient(circle at top, #1e293b 0, #020617 55%, #000 100%);
       color: var(--text-main);
       line-height: 1.5;
     }
@@ -37,7 +35,7 @@
     }
 
     header {
-      max-width: 1000px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 1.2rem 1.4rem;
       display: flex;
@@ -48,11 +46,11 @@
       z-index: 20;
       backdrop-filter: blur(16px);
       background: linear-gradient(to bottom,
-        rgba(15, 23, 42, 0.92),
-        rgba(15, 23, 42, 0.7),
+        rgba(15, 23, 42, 0.94),
+        rgba(15, 23, 42, 0.8),
         transparent
       );
-      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
     }
 
     .brand {
@@ -62,12 +60,12 @@
     }
 
     .brand-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 10px;
+      width: 34px;
+      height: 34px;
+      border-radius: 11px;
       background: conic-gradient(from 160deg,
         #22c55e,
-        #06b6d4,
+        #22d3ee,
         #6366f1,
         #22c55e
       );
@@ -80,21 +78,21 @@
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.7);
     }
 
-    .brand-text-main {
+    .brand-name {
       font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 0.04em;
+      font-size: 1.05rem;
+      letter-spacing: 0.05em;
     }
 
-    .brand-text-sub {
+    .brand-sub {
       font-size: 0.78rem;
       color: var(--text-soft);
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.15em;
     }
 
     .header-pill {
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       border-radius: 999px;
       padding: 0.3rem 0.8rem;
       border: 1px solid rgba(148, 163, 184, 0.45);
@@ -102,26 +100,17 @@
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      background: rgba(15, 23, 42, 0.8);
+      background: rgba(15, 23, 42, 0.9);
     }
 
     main {
-      max-width: 1000px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 1.6rem 1.4rem 3.5rem;
     }
 
     .hero {
-      margin-top: 1.2rem;
-      display: grid;
-      gap: 1.8rem;
-    }
-
-    @media (min-width: 768px) {
-      .hero {
-        grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-        align-items: center;
-      }
+      margin-top: 1.3rem;
     }
 
     .eyebrow {
@@ -134,7 +123,7 @@
       border: 1px solid rgba(148, 163, 184, 0.4);
       font-size: 0.8rem;
       color: var(--text-soft);
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.7rem;
     }
 
     .eyebrow-dot {
@@ -149,13 +138,13 @@
       color: #022c22;
     }
 
-    .hero h1 {
+    h1 {
       font-size: clamp(2.1rem, 3vw + 1.6rem, 3rem);
       margin: 0 0 0.8rem;
       letter-spacing: -0.03em;
     }
 
-    .hero h1 span {
+    h1 span {
       background: linear-gradient(to right, #22c55e, #22d3ee, #a855f7);
       -webkit-background-clip: text;
       background-clip: text;
@@ -165,14 +154,8 @@
     .hero-lead {
       font-size: 1rem;
       color: var(--text-soft);
-      max-width: 34rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-badge {
-      font-size: 0.85rem;
-      color: var(--text-soft);
-      margin-bottom: 1.4rem;
+      max-width: 38rem;
+      margin-bottom: 1.3rem;
     }
 
     .hero-actions {
@@ -180,7 +163,7 @@
       flex-wrap: wrap;
       gap: 0.7rem;
       align-items: center;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
 
     .btn-primary {
@@ -191,215 +174,118 @@
       padding: 0.85rem 1.6rem;
       border-radius: 999px;
       border: none;
-      background: linear-gradient(to right, #22c55e, #22c55e);
+      background: linear-gradient(to right, #22c55e, #4ade80);
       color: #022c22;
       font-weight: 600;
       font-size: 0.98rem;
       cursor: pointer;
-      box-shadow: 0 14px 35px rgba(34, 197, 94, 0.35);
+      box-shadow: 0 14px 35px rgba(34, 197, 94, 0.4);
       transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.25s ease;
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 18px 45px rgba(34, 197, 94, 0.5);
-      background: linear-gradient(to right, #22c55e, #4ade80);
+      box-shadow: 0 18px 45px rgba(34, 197, 94, 0.55);
     }
 
-    .btn-ghost {
+    .btn-secondary {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      justify-content: center;
       padding: 0.8rem 1.3rem;
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.45);
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15, 23, 42, 0.9);
       color: var(--text-soft);
       font-size: 0.9rem;
       cursor: pointer;
       transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
     }
 
-    .btn-ghost:hover {
+    .btn-secondary:hover {
       background: rgba(31, 41, 55, 0.95);
       border-color: rgba(209, 213, 219, 0.7);
       color: #e5e7eb;
     }
 
-    .hero-disclaimer {
+    .hero-note {
       font-size: 0.78rem;
       color: var(--text-soft);
       max-width: 32rem;
-    }
-
-    .hero-card {
-      border-radius: 1.5rem;
-      padding: 1.4rem 1.3rem 1.3rem;
-      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.2), transparent 55%),
-                  radial-gradient(circle at bottom, rgba(37, 99, 235, 0.18), rgba(15, 23, 42, 0.95) 65%);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      min-height: 220px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-avatar-ring {
-      width: 56px;
-      height: 56px;
-      border-radius: 999px;
-      border: 2px solid rgba(187, 247, 208, 0.9);
-      padding: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(15, 23, 42, 0.85);
-      margin-bottom: 0.8rem;
-    }
-
-    .hero-avatar-inner {
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #fed7aa, #fb923c, #ea580c);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-    }
-
-    .hero-chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .chip {
-      font-size: 0.78rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      color: var(--text-soft);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .chip-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-    }
-
-    .hero-card-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-
-    .hero-card-text {
-      font-size: 0.85rem;
-      color: #e5e7eb;
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-card-meta {
-      font-size: 0.78rem;
-      color: var(--text-soft);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
       margin-top: 0.4rem;
     }
 
-    .pill {
-      font-size: 0.76rem;
-      padding: 0.18rem 0.55rem;
+    .nav-buttons {
+      margin-top: 1.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .nav-chip {
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.85);
+      padding: 0.45rem 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.85rem;
       color: var(--text-soft);
-      border: 1px dashed rgba(148, 163, 184, 0.4);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
     }
 
     section {
-      margin-top: 2.8rem;
+      margin-top: 2.6rem;
+      padding: 1.6rem 1.4rem;
+      border-radius: 1.4rem;
+      background: rgba(15, 23, 42, 0.94);
+      border: 1px solid var(--border-subtle);
     }
 
     section h2 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
       font-size: 1.25rem;
-      margin-bottom: 0.6rem;
     }
 
     section p {
+      font-size: 0.93rem;
       color: var(--text-soft);
-      font-size: 0.95rem;
-    }
-
-    .grid {
-      display: grid;
-      gap: 1.1rem;
-      margin-top: 1.1rem;
-    }
-
-    @media (min-width: 800px) {
-      .grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-      .grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    .card {
-      border-radius: 1.1rem;
-      border: 1px solid var(--border-subtle);
-      background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.96));
-      padding: 1rem 1rem 1.1rem;
-    }
-
-    .card h3 {
-      margin: 0 0 0.35rem;
-      font-size: 1rem;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: var(--text-soft);
+      margin-top: 0.3rem;
     }
 
     ul {
       padding-left: 1.2rem;
-      margin: 0.4rem 0 0.3rem;
+      margin: 0.3rem 0 0.2rem;
     }
 
     li {
       font-size: 0.9rem;
       color: var(--text-soft);
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.25rem;
     }
 
-    .safety-note {
-      margin-top: 0.9rem;
+    .tag-row {
+      margin-top: 0.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
       font-size: 0.8rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px dashed rgba(148, 163, 184, 0.6);
       color: var(--text-soft);
-      border-left: 2px solid rgba(148, 163, 184, 0.7);
-      padding-left: 0.7rem;
-    }
-
-    .danger {
-      color: var(--danger);
-      font-weight: 500;
     }
 
     .footer {
       border-top: 1px solid rgba(31, 41, 55, 0.9);
       padding: 1.4rem 1.4rem 1.8rem;
-      max-width: 1000px;
+      max-width: 960px;
       margin: 0 auto;
       font-size: 0.8rem;
       color: var(--text-soft);
@@ -408,6 +294,18 @@
       gap: 0.7rem;
       justify-content: space-between;
     }
+
+    @media (max-width: 640px) {
+      header {
+        padding-inline: 1rem;
+      }
+      main {
+        padding-inline: 1rem;
+      }
+      section {
+        padding-inline: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -415,155 +313,139 @@
     <div class="brand">
       <div class="brand-icon">C</div>
       <div>
-        <div class="brand-text-main">Compinxa</div>
-        <div class="brand-text-sub">Amizades +18</div>
+        <div class="brand-name">Compinxa</div>
+        <div class="brand-sub">Amizades +18</div>
       </div>
     </div>
     <div class="header-pill">
-      🌍 Portugal & online
+      Portugal &amp; online
       <span style="width:4px;height:4px;border-radius:999px;background:#22c55e;display:inline-block;"></span>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div>
-        <div class="eyebrow">
-          <span class="eyebrow-dot">⭐</span>
-          Pensado para jovens adultos
-        </div>
-        <h1>Faz novas amizades com <span>calma e respeito</span>.</h1>
-        <p class="hero-lead">
-          O <strong>Compinxa</strong> é um ponto de partida para quem quer conhecer novas pessoas,
-          sem pressas e sem pressão: jovens adultos que querem conversar, partilhar interesses,
-          criar grupos e, se fizer sentido, combinar encontros presenciais com segurança.
-        </p>
-        <p class="hero-badge">
-          Não é uma plataforma comercial, não guardamos os teus dados neste site
-          e não tens de colocar o teu nome verdadeiro ou fotografia real se não quiseres.
-        </p>
-        <div class="hero-actions">
-          <a href="https://EXEMPLO-DO-TEU-LINK" class="btn-primary" target="_blank" rel="noopener">
-            Entrar na comunidade
-            <span>↗</span>
-          </a>
-          <button class="btn-ghost" type="button">
-            Ver regras básicas
-          </button>
-        </div>
-        <p class="hero-disclaimer">
-          Apenas para maiores de 18 anos. Ao entrares na comunidade (Discord/Telegram),
-          assumes responsabilidade pelas tuas interações e pelas informações que decides partilhar.
-        </p>
+    <div class="hero">
+      <div class="eyebrow">
+        <span class="eyebrow-dot">⭐</span>
+        Pensado para jovens adultos
       </div>
-
-      <aside class="hero-card" aria-label="Exemplo de utilizador">
-        <div class="hero-avatar-ring">
-          <div class="hero-avatar-inner">🙂</div>
-        </div>
-        <div class="hero-chip-row">
-          <div class="chip"><span class="chip-dot"></span>Nova na cidade</div>
-          <div class="chip">Procuro amigos p/ café</div>
-        </div>
-        <div class="hero-card-title">“Cheguei à universidade sem conhecer ninguém…”</div>
-        <div class="hero-card-text">
-          “Usei o Compinxa para encontrar pessoas da minha faculdade que também
-          estavam meio perdidas. Começámos com conversas online, depois grupos
-          de estudo, agora já temos jantares e jogos à sexta.”
-        </div>
-        <div class="hero-card-meta">
-          Exemplos de atividades:
-          <div class="pill-row">
-            <div class="pill">🎓 Grupos de estudo</div>
-            <div class="pill">☕ Cafés & caminhadas</div>
-            <div class="pill">🎮 Jogos online</div>
-            <div class="pill">🎶 Música & concertos</div>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <section>
-      <h2>Como funciona na prática</h2>
-      <p>Simples, sem burocracias e sem formulários neste site:</p>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>1. Entras com pseudónimo</h3>
-          <p>
-            Entrar na comunidade é como entrar num grupo: usas nome fictício
-            e uma imagem à tua escolha. Podes mostrar mais de ti aos poucos, só se fizer sentido.
-          </p>
-        </div>
-        <div class="card">
-          <h3>2. Dizes o que procuras</h3>
-          <p>
-            Apresentas-te: interesses, cidade/região, o que procuras
-            (amizade, grupo de estudo, hobbies, companhia para sair, etc.).
-          </p>
-        </div>
-        <div class="card">
-          <h3>3. Ganhas compinxas</h3>
-          <p>
-            Participas nas conversas, encontras pessoas com quem te identificas
-            e, se houver confiança, combinas outras formas de contacto fora da comunidade.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Regras básicas de convivência</h2>
-      <p>Para manter o espaço saudável, toda a gente concorda em:</p>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>Respeito em primeiro lugar</h3>
-          <ul>
-            <li>Sem insultos, assédio, humilhação ou discriminação.</li>
-            <li>Respeito total por género, orientação, aparência e opiniões.</li>
-            <li>Discussões sim, ataques pessoais não.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Sem conteúdo tóxico</h3>
-          <ul>
-            <li>Sem conteúdo sexual explícito ou não solicitado.</li>
-            <li>Sem pedidos de dinheiro, esquemas ou fraudes.</li>
-            <li>Sem partilhar dados pessoais de terceiros.</li>
-          </ul>
-        </div>
-      </div>
-      <p class="safety-note">
-        Se alguém te fizer sentir desconforto, afasta-te, bloqueia e, se a plataforma permitir,
-        denuncia. Nas relações online, vale sempre mais um “não” a tempo do que um risco desnecessário.
+      <h1>Faz novas amizades com <span>calma e respeito</span>.</h1>
+      <p class="hero-lead">
+        O <strong>Compinxa</strong> é um ponto de partida para quem quer conhecer pessoas novas,
+        sem pressas e sem pressão. Uma comunidade para conversar, criar grupos, estudar em conjunto
+        ou combinar atividades na vida real.
       </p>
-    </section>
+      <div class="hero-actions">
+        <a href="https://TEU-LINK-DA-COMUNIDADE" class="btn-primary" target="_blank" rel="noopener">
+          Entrar na comunidade ↗
+        </a>
+        <button class="btn-secondary" type="button" onclick="scrollToSection('regras')">
+          Ver regras básicas
+        </button>
+      </div>
+      <p class="hero-note">
+        Apenas para maiores de 18 anos. Dentro da comunidade (Discord/Telegram), assumes
+        responsabilidade pelas tuas interações e pelo que decides partilhar.
+      </p>
 
-    <section>
-      <h2>Segurança e responsabilidade</h2>
+      <div class="nav-buttons">
+        <button class="nav-chip" type="button" onclick="scrollToSection('compinxa')">
+          O que é um Compinxa?
+        </button>
+        <button class="nav-chip" type="button" onclick="scrollToSection('colecionador')">
+          Colecionador de Compinxas
+        </button>
+        <button class="nav-chip" type="button" onclick="scrollToSection('seguranca')">
+          Segurança &amp; cuidados
+        </button>
+      </div>
+    </div>
+
+    <section id="compinxa">
+      <h2>O que é um Compinxa?</h2>
       <p>
-        A internet aproxima pessoas, mas também exige cuidado. O Compinxa é um ponto de partida:
-        cada pessoa é responsável pelas suas decisões.
+        “Compinxa” aqui é simplesmente isto: uma pessoa com quem crias uma
+        ligação de amizade. Alguém com quem falas mais do que “olá, tudo bem?”,
+        com quem podes combinar cafés, estudar, jogar, caminhar ou só desabafar.
       </p>
       <ul>
-        <li>Nunca partilhes logo morada, local de trabalho ou documentos.</li>
-        <li>Quando conheceres alguém ao vivo, escolhe locais públicos e avisa alguém de confiança.</li>
-        <li>Se uma conversa te parece estranha ou agressiva, tens todo o direito de sair.</li>
-        <li class="danger">Desconfia sempre de pedidos de dinheiro ou histórias demasiado dramáticas.</li>
+        <li>Não é sobre namoros – é sobre <strong>amizade social</strong>.</li>
+        <li>Podes usar nome fictício e foto neutra até te sentires à vontade.</li>
+        <li>Se a ligação fizer sentido, cada um decide o que partilhar a seguir.</li>
       </ul>
-      <p class="safety-note">
-        Dicas gerais de segurança em encontros online podem ser encontradas em organizações de
-        prevenção e apoio, como conselhos de policiamento local, serviços de segurança digital
-        e guias de apps de encontros. Usa o bom senso e protege-te.
+      <div class="tag-row">
+        <span class="tag">🎓 Caloiros e universitários</span>
+        <span class="tag">🏠 Quem mudou de cidade</span>
+        <span class="tag">🎮 Jogos &amp; hobbies</span>
+        <span class="tag">☕ Cafés &amp; conversas</span>
+      </div>
+    </section>
+
+    <section id="regras">
+      <h2>Regras básicas</h2>
+      <p>
+        Para que o Compinxa seja um bom lugar, toda a gente segue estas regras simples:
+      </p>
+      <ul>
+        <li>Falar com respeito. Nada de insultos, humilhação ou provocação gratuita.</li>
+        <li>Nenhum tipo de discriminação (género, orientação, religião, origem, aparência…).</li>
+        <li>Nada de conteúdo sexual explícito ou não solicitado.</li>
+        <li>Proibidos pedidos de dinheiro, esquemas ou spam.</li>
+        <li>Não partilhar dados pessoais de outras pessoas sem consentimento.</li>
+      </ul>
+      <p>
+        Se alguém te faltar ao respeito, afasta-te. Se a plataforma tiver essa opção,
+        bloqueia e denuncia.
+      </p>
+    </section>
+
+    <section id="colecionador">
+      <h2>Colecionador de Compinxas (em breve)</h2>
+      <p>
+        No futuro, o Compinxa vai ter um sistema simples para mostrar quantas amizades
+        reais já construíste na comunidade.
+      </p>
+      <ul>
+        <li>Conta apenas conversas com mensagens dos dois lados, ao longo de vários momentos.</li>
+        <li>Quando a ligação é consistente, ambos ganham <strong>+1 Compinxa</strong> no perfil.</li>
+        <li>O número aparece no teu perfil, mas nunca mostra quem são as pessoas.</li>
+      </ul>
+      <p>
+        O objetivo não é colecionar pessoas – é colecionar <strong>boas conversas</strong>.
+        E podes desativar o contador se preferires manter essa informação privada.
+      </p>
+    </section>
+
+    <section id="seguranca">
+      <h2>Segurança &amp; cuidados</h2>
+      <p>
+        Internet é óptima para aproximar pessoas, mas também exige atenção.
+        Não há forma de garantir que todos são quem dizem ser. Por isso:
+      </p>
+      <ul>
+        <li>Nunca partilhes logo morada, trabalho, escola ou documentos.</li>
+        <li>Se decidires encontrar alguém ao vivo, escolhe locais públicos e avisa alguém de confiança.</li>
+        <li>Desconfia de quem pressiona, manipula ou faz pedidos de dinheiro.</li>
+        <li>Tens sempre o direito de dizer “não”, sair da conversa ou sair da comunidade.</li>
+      </ul>
+      <p>
+        A melhor métrica não é o número de Compinxas, é sentires-te respeitado e seguro.
       </p>
     </section>
   </main>
 
   <footer class="footer">
     <div>© <span id="year"></span> Compinxa · Projeto informal de comunidade de amizades +18.</div>
-    <div>Este site não recolhe dados pessoais nem usa formulários de registo.</div>
+    <div>Este site não recolhe dados pessoais nem tem formulários de registo.</div>
   </footer>
 
   <script>
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
